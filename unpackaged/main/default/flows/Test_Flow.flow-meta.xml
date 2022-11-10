@@ -24,10 +24,26 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
+        <name>Test_Modification</name>
+        <label>Test Modification</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <connector>
+            <targetReference>Update</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>BillingCity</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update</name>
         <label>Update</label>
         <locationX>176</locationX>
-        <locationY>335</locationY>
+        <locationY>455</locationY>
         <inputAssignments>
             <field>Active__c</field>
             <value>
@@ -40,7 +56,7 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update</targetReference>
+            <targetReference>Test_Modification</targetReference>
         </connector>
         <object>Account</object>
         <recordTriggerType>Create</recordTriggerType>
